@@ -37,6 +37,7 @@ int D7Status = 0;
 int D8Status = 0;
 int D9Status = 0;
 int D10Status = 0;
+int delaymp3 = 30000;
 
 void setup() {
   // put your setup code here, to run once:
@@ -72,24 +73,24 @@ void loop() {
   }
   if (D7State == HIGH) {
     // normal condition
-    if(D7Status == 0){
-      D7Status = 1;
+    //if(D7Status == 0){
+    //D7Status = 1;
       mp3.play(1);
-    }
+    //}
     Serial.println("Kondisi 1");
-    delay(5);
+    delay(delaymp3);
     return;
   }
   D7Status = 0;
 
   if (D8State == HIGH) {
     // normal condition
-    if(D8Status == 0){
-      D8Status = 1;
+    //if(D8Status == 0){
+    //  D8Status = 1;
       mp3.play(2);
-    }
+    //}
     Serial.println("Kondisi 2");
-    delay(5);
+    delay(delaymp3);
     return;
   }
   D8Status = 0;
@@ -97,12 +98,12 @@ void loop() {
   if (D9State == HIGH) {
     // normal condition
 
-    if(D9Status == 0){
-      D9Status = 1;
+    //if(D9Status == 0){
+    //  D9Status = 1;
       mp3.play(3);
-    }
+    //}
     //Serial.println("Kondisi 3");
-    delay(5);
+    delay(delaymp3);
     return;
   }
 
@@ -110,12 +111,12 @@ void loop() {
 
   if (D10State == HIGH) {
     // normal condition
-    if(D10Status == 0){
-      D10Status = 1;
+    //if(D10Status == 0){
+    //  D10Status = 1;
       mp3.play(4);
-    }
+    //}
     //Serial.println("Kondisi 4");
-    delay(5);
+    delay(delaymp3);
     return;
   }
   D10Status = 0;
